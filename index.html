@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conversión de Moneda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buenos dias tenga usted buen ciudadano y bienvenidos a:</h1>
+        <div class="container">
+          <h1>Calculadora de Conversión de Moneda</h1>
+          <div>
+              <h2>Monto Total a Pagar:</h2>
+              <input type="number" id="totalAmountToPay" placeholder="Monto Total">
+              <select id="currencyToPay">
+                  <option value="USD">Dólares Americanos (USD)</option>
+                  <option value="EUR">Euros (EUR)</option>
+                  <option value="BsBCV">Bolívares (BsBCV)</option>
+                  <option value="BsP">Bolívares (BsP)</option>
+              </select>
+          </div>
+          <div>
+        <div>
+            <h2>Selecciona las monedas para el pago:</h2>
+            <div>
+                <input type="checkbox" id="payWithUSD" name="paymentCurrency" value="USD">
+                <label for="payWithUSD">Dólares Americanos (USD)</label>
+                <input type="number" id="amountUSD" placeholder="Monto en USD">
+            </div>
+            <div>
+                <input type="checkbox" id="payWithEUR" name="paymentCurrency" value="EUR">
+                <label for="payWithEUR">Euros (EUR)</label>
+                <input type="number" id="amountEUR" placeholder="Monto en EUR">
+            </div>
+            <div>
+                <input type="checkbox" id="payWithBsBCV" name="paymentCurrency" value="BsBCV">
+                <label for="payWithBsBCV">Bolívares (BsBCV)</label>
+                <input type="number" id="amountBsBCV" placeholder="Monto en BsBCV">
+            </div>
+            <div>
+                <input type="checkbox" id="payWithBsP" name="paymentCurrency" value="BsP">
+                <label for="payWithBsP">Bolívares (BsP)</label>
+                <input type="number" id="amountBsP" placeholder="Monto en BsP">
+            </div>
+        </div>
+        <div>
+            <h2>Selecciona las monedas para recibir el cambio:</h2>
+            <div>
+                <input type="checkbox" id="changeInUSD" name="changeCurrency" value="USD">
+                <label for="changeInUSD">Dólares Americanos (USD)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="changeInEUR" name="changeCurrency" value="EUR">
+                <label for="changeInEUR">Euros (EUR)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="changeInBsBCV" name="changeCurrency" value="BsBCV">
+                <label for="changeInBsBCV">Bolívares (BsBCV)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="changeInBsP" name="changeCurrency" value="BsP">
+                <label for="changeInBsP">Bolívares (BsP)</label>
+            </div>
+        </div>
+        <button onclick="calculateChange()">Calcular Cambio</button>
+        <button id="resetButton">Reiniciar</button>
+
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
